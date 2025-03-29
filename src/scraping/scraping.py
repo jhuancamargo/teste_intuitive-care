@@ -1,4 +1,4 @@
-# src/scraping/scraper.py
+# src/scraping/scraper.py - loc/
 import requests
 from bs4 import BeautifulSoup
 import os
@@ -88,3 +88,4 @@ def download_anexos(base_dir: Path = Path.cwd()) -> bool:
 
 if __name__ == "__main__":
     download_anexos()
+
