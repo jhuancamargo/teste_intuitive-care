@@ -1,0 +1,25 @@
+# Web Scraping
+beautifulsoup4==4.12.0
+requests==2.31.0
+pdfkit==1.0.0  # Opcional para conversão HTML-PDF
+html5lib==1.1  # Parser alternativo
+
+# PDF Processing
+tabula-py==2.7.0
+pandas==2.0.3
+PyPDF2==3.0.1
+
+# Banco de Dados
+sqlalchemy==2.0.19
+psycopg2-binary==2.9.7  # Para PostgreSQL
+python-dotenv==1.0.0  # Para gerenciar variáveis de ambiente
+
+# API
+fastapi==0.95.2
+uvicorn==0.22.0
+python-multipart==0.0.6
+
+# Testes
+pytest==7.4.0
+pytest-cov==4.1.0
+requests-mock==1.11.0

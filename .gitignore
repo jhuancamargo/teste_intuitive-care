@@ -1,0 +1,26 @@
+echo # Arquivos gerados  .gitignore
+echo downloads  .gitignore
+echo output  .gitignore
+echo .zip  .gitignore
+echo .pdf  .gitignore
+echo .csv  .gitignore
+echo   .gitignore
+echo # Logs  .gitignore
+echo .log  .gitignore
+echo   .gitignore
+echo # Ambientes virtuais  .gitignore
+echo venv  .gitignore
+echo env  .gitignore
+echo   .gitignore
+echo # Arquivos temporários do Python  .gitignore
+echo __pycache__  .gitignore
+echo .pyc  .gitignore
+# Dados brutos e temporários
+database/raw_data/
+downloads/
+*.csv
+*.pdf
+*.zip
+*.log
+__pycache__/
+*.pyc
