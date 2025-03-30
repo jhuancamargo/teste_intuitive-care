@@ -19,6 +19,7 @@ fastapi==0.95.2
 uvicorn==0.22.0
 python-multipart==0.0.6
 flask
+flask-cors
 
 # Testes
 pytest==7.4.0
