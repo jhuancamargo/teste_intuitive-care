@@ -5,3 +5,10 @@
 2025-03-27 10:40:37,654 - INFO: Processo concluído com sucesso!
 2025-03-27 10:40:37,655 - INFO: Arquivos salvos em: C:\Users\jenif\Desktop\projeto_estagio\src\scraping\downloads
 2025-03-27 10:40:37,656 - INFO: ZIP gerado em: C:\Users\jenif\Desktop\projeto_estagio\src\scraping\Anexos_Jhuan_Camargo.zip
+2025-03-30 13:45:02,123 - INFO: Acessando https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos
+2025-03-30 13:45:02,466 - INFO: Baixando Anexo_I.pdf de https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos/Anexo_I_Rol_2021RN_465.2021_RN627L.2024.pdf
+2025-03-30 13:45:04,526 - INFO: Baixando Anexo_II.pdf de https://www.gov.br/ans/pt-br/acesso-a-informacao/participacao-da-sociedade/atualizacao-do-rol-de-procedimentos/Anexo_II_DUT_2021_RN_465.2021_RN628.2025_RN629.2025.pdf
+2025-03-30 13:45:05,034 - INFO: Compactando arquivos em /home/teste_intuitive-care/src/scraping/Anexos_Jhuan_Camargo.zip
+2025-03-30 13:45:05,656 - INFO: Processo concluÃ­do com sucesso!
+2025-03-30 13:45:05,656 - INFO: Arquivos salvos em: /home/teste_intuitive-care/src/scraping/downloads
+2025-03-30 13:45:05,656 - INFO: ZIP gerado em: /home/teste_intuitive-care/src/scraping/Anexos_Jhuan_Camargo.zip

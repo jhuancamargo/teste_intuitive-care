@@ -66,13 +66,13 @@ CREATE INDEX idx_reg_ans ON demonstracoes_contabeis (reg_ans);
 CREATE INDEX idx_cd_conta_contabil ON demonstracoes_contabeis (cd_conta_contabil);
 
 -- Importação dos dados cadastrais
-\copy temp_operadoras FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/Relatorio_cadop.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_operadoras FROM '/home/teste_intuitive-care/scripts/database/raw_data/Relatorio_cadop.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 
 INSERT INTO operadoras_ativas (reg_ans, cnpj, razao_social)
 SELECT reg_ans, cnpj, razao_social FROM temp_operadoras;
 
 -- Importação de demonstrações contábeis para 2023
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/1T2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/1T2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
@@ -83,7 +83,7 @@ WHERE EXISTS (SELECT 1 FROM operadoras_ativas o WHERE o.reg_ans = t.reg_ans)
 AND t.cd_conta_contabil = '41111'
 ON CONFLICT ON CONSTRAINT unique_reg_ans_ano_trimestre DO NOTHING;
 
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/2t2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/2T2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
@@ -94,7 +94,7 @@ WHERE EXISTS (SELECT 1 FROM operadoras_ativas o WHERE o.reg_ans = t.reg_ans)
 AND t.cd_conta_contabil = '41111'
 ON CONFLICT ON CONSTRAINT unique_reg_ans_ano_trimestre DO NOTHING;
 
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/3t2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/3T2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
@@ -105,7 +105,7 @@ WHERE EXISTS (SELECT 1 FROM operadoras_ativas o WHERE o.reg_ans = t.reg_ans)
 AND t.cd_conta_contabil = '41111'
 ON CONFLICT ON CONSTRAINT unique_reg_ans_ano_trimestre DO NOTHING;
 
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/4t2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/4T2023.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
@@ -117,7 +117,7 @@ AND t.cd_conta_contabil = '41111'
 ON CONFLICT ON CONSTRAINT unique_reg_ans_ano_trimestre DO NOTHING;
 
 -- Importação de demonstrações contábeis para 2024
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/1t2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/1T2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
@@ -128,7 +128,7 @@ WHERE EXISTS (SELECT 1 FROM operadoras_ativas o WHERE o.reg_ans = t.reg_ans)
 AND t.cd_conta_contabil = '41111'
 ON CONFLICT ON CONSTRAINT unique_reg_ans_ano_trimestre DO NOTHING;
 
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/2t2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/2T2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
@@ -139,7 +139,7 @@ WHERE EXISTS (SELECT 1 FROM operadoras_ativas o WHERE o.reg_ans = t.reg_ans)
 AND t.cd_conta_contabil = '41111'
 ON CONFLICT ON CONSTRAINT unique_reg_ans_ano_trimestre DO NOTHING;
 
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/3t2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/3T2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
@@ -150,7 +150,7 @@ WHERE EXISTS (SELECT 1 FROM operadoras_ativas o WHERE o.reg_ans = t.reg_ans)
 AND t.cd_conta_contabil = '41111'
 ON CONFLICT ON CONSTRAINT unique_reg_ans_ano_trimestre DO NOTHING;
 
-\copy temp_demonstracoes FROM 'C:/Users/jenif/Desktop/projeto_estagio/scripts/database/raw_data/4t2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
+\copy temp_demonstracoes FROM '/home/teste_intuitive-care/scripts/database/raw_data/4T2024.csv' WITH (FORMAT CSV, DELIMITER ';', HEADER TRUE, ENCODING 'UTF8');
 INSERT INTO demonstracoes_contabeis (reg_ans, eventos_assistencia, ano, trimestre, cd_conta_contabil, descricao)
 SELECT t.reg_ans,
        CASE WHEN REPLACE(t.vl_saldo_final, ',', '.')::NUMERIC < 0 THEN 0
