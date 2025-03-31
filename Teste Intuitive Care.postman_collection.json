@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "c749f41a-0e2f-400d-a8b2-f228cea11d6c",
+		"name": "Teste Intuitive Care",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43617496",
+		"_collection_link": "https://jhuancamargo.postman.co/workspace/Jhuan-Camargo's-Workspace~e56fff64-a203-4bb0-8745-51d8381967e8/collection/43617496-c749f41a-0e2f-400d-a8b2-f228cea11d6c?action=share&source=collection_link&creator=43617496"
+	},
+	"item": [
+		{
+			"name": "Busca Bradesco",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://191.252.111.56/api/search-operadoras?q=bradesco",
+					"protocol": "http",
+					"host": [
+						"191",
+						"252",
+						"111",
+						"56"
+					],
+					"path": [
+						"api",
+						"search-operadoras"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "bradesco"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Q4 2024",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://191.252.111.56/api/top-operadoras/q4-2024",
+					"protocol": "http",
+					"host": [
+						"191",
+						"252",
+						"111",
+						"56"
+					],
+					"path": [
+						"api",
+						"top-operadoras",
+						"q4-2024"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top OPERADORAS 2024",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://191.252.111.56/api/top-operadoras/2024",
+					"protocol": "http",
+					"host": [
+						"191",
+						"252",
+						"111",
+						"56"
+					],
+					"path": [
+						"api",
+						"top-operadoras",
+						"2024"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca Unimed",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://191.252.111.56/api/search-operadoras?q=unimed",
+					"protocol": "http",
+					"host": [
+						"191",
+						"252",
+						"111",
+						"56"
+					],
+					"path": [
+						"api",
+						"search-operadoras"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "unimed"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
