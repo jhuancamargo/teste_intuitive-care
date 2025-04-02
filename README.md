@@ -94,5 +94,5 @@ O sistema foi projetado com foco em **robustez**, **eficiência** e **usabilidad
 ### Passos
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/jhuancamargo/Teste-Intuitive-Care-VPS.git
-   cd Teste-Intuitive-Care-VPS
+   git clone https://github.com/jhuancamargo/teste_intuitive-care.git
+   
